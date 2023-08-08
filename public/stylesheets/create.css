@@ -1,0 +1,52 @@
+#board {
+    max-width: 800px;
+    margin: 0 auto;
+}
+form{
+    margin-top: 30px;
+}
+input[type="text"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: block;
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+.preview-images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.preview-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #ff7400;
+    border-color: #ff7400;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button{
+    float: right;
+    margin-bottom: 30px;
+
+}
+textarea{
+    display: block;
+}
+#content{
+    height: 500px;
+}

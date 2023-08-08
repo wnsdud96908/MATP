@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>수정</title>
+    <link rel="stylesheet" href="/stylesheets/index.css"/>
+    <link rel="stylesheet" href="/stylesheets/update.css">
+</head>
+<body>
+{% include "header.html" %}
+{% include "navbar.html" %}
+<div id="main">
+<div class="board">
+    <form action="/board/update/{{boards.board_no}}" method="post" enctype="multipart/form-data">
+        제목:<input type="text" name="board_title" value="{{boards.board_title}}" id="title">
+        <div class="form-group">
+            <label for="example-input-file">이미지</label>
+            <input type="file" name="multi-files" multiple id="input-multi-files" value="" class="form-control-file border"/>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="preview-images"></div>
+            </div>
+        </div>
+        내용:<textarea name="board_content" value="{{boards.board_content}}" id="content" cols="50" rows="10"></textarea>
+        <hr>
+        <button type="submit" class="btn btn-primary">수정</button>
+    </form>
+</div>
+</div>
+{% include "footer.html" %}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/javascripts/update.js"></script>
+</body>
+</html>

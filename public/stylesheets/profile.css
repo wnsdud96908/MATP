@@ -1,0 +1,281 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: orange;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}
+
+#goToBack {
+    position: relative;
+    left: 830px;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color:black;
+    background-color: white;
+}
+
+#myProfile {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 250px;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 3px 3px 10px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+#profilePhoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#photoBox {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo {
+    background-color: black;
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    margin-top: 10px;
+}
+
+#changeBtn {
+    position: relative;
+    bottom: 55px;
+    left: 50px;
+    cursor: pointer;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+#myPhotoUp {
+    position: relative;
+    bottom: 55px;
+    left: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+#nick {
+    position: relative;
+    bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    background-color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+#profileBox {
+    background-color: orange;
+    height: 100%;
+    border-radius: 20px;
+    width: 775px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-left: 25px;
+}
+
+input {
+    padding-left: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 23px;
+    width: 160px;
+} 
+
+.changeInput {
+    display: flex;
+}
+
+#profileTel > div {
+    font-size: 17px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+#btnBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+#btnBox > button {
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+    background-color: orange;
+    font-weight: 600;
+    width: 80px;
+    height: 35px;
+    border: none;
+    border: 2px solid white; 
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 0.5px rgba(0, 0, 0, 0.4);
+    transition: .3s;
+    cursor: pointer;
+}
+
+#btnBox > button:hover{
+    background-color: black;
+    color: orange;
+    font-weight: 600;
+    transition: .3s;
+}
+
+#changePwBtn {
+    position: relative;
+    left: 220px;
+}
+
+#btnBox > a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+    background-color: orange;
+    font-weight: 600;
+    border: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 0.5px rgba(0, 0, 0, 0.4);
+    transition: .3s;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#btnBox > a:hover {
+    background-color: black;
+    color: orange;
+    transition: .3s;
+}
+
+#myList {
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 0 20px 20px 20px;
+    width: 1000px;
+    padding: 25px;
+    box-shadow: 3px 3px 10px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+#listTitle {
+    position: relative;
+    right:371px;
+    margin-top: 30px;
+    z-index: 1;
+}
+
+#listTitle > button{
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+.myWriting {
+    display: flex;
+    background-color: orange;
+    width: 1000px;
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 10px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+.writingImg {
+    border-radius: 20px 0 0 20px;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.basicImg {
+    border-radius: 20px 0 0 20px;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.writingBox {
+    padding: 20px;
+}
+
+.writingTitle {
+    font-weight: 700;
+    background-color: white;
+    width: 700px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+.writingContent {
+    padding-left: 15px;
+    /*padding: 20px;*/
+    background-color: aliceblue;
+    height: 120px;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.writingContent::-webkit-scrollbar{
+    width: 10px;
+}
+
+.writingContent::-webkit-scrollbar-thumb{
+    height: 30%;
+    border-radius: 20px;
+}

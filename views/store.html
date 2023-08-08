@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/store.css">
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+</head>
+<body>
+{% include "header.html" %}
+{% include "navbar.html" %}
+<div id="main">
+    <div id="img">
+        {% for img in store.img %}
+        <img class="preview-images" width=100 src="{{ img.url }}" accept="image/*">
+        {% endfor %}
+    </div>
+
+    <div id="content">
+        <div><h1>{{store.store_nm}}</h1></div>
+        <hr>
+        <br>
+        <table>
+            <tr>
+                <th>주소</th>
+                <th class="import">{{store.store_addr}}</th>
+            </tr>
+            <tr>
+                <th>상세주소</th>
+                <th class="import">{{store.store_detail_addr}}</th>
+            </tr>
+            <tr>
+                <th>연락처</th>
+                <th class="import">{{store.store_tel}}</th>
+            </tr>
+            <tr>
+                <th>평일영업시간</th>
+                <th class="import">{{store.store_wkd_time}}</th>
+            </tr>
+            <tr>
+                <th>주말영업시간</th>
+                <th class="import">{{store.store_wknd_time}}</th>
+            </tr>
+            <tr>
+                <th>쉬는시간</th>
+                <th class="import">{{store.store_break_time}}</th>
+            </tr>
+            <tr>
+                <th>가게정보</th>
+                <th class="import">{{store.store_content}}</th>
+            </tr>
+        </table>
+    </div>
+</div>
+{% include "footer.html" %}
+</body>
+</html>

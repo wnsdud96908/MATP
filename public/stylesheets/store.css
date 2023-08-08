@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table th{
+    text-align: left;
+    padding-right: 100px;
+    padding-bottom: 30px;
+}
+.import{
+    width: 70%;
+    font-weight: normal;
+}
+#img {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#img img{
+    width: 340px;
+    height: 340px;
+}
+#content{
+    width: 70%;
+    margin: 0 auto;
+
+}

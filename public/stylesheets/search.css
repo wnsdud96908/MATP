@@ -1,0 +1,124 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.search-input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+.search-button {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ff7400;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#content-box {
+    width: calc(80%);
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+#content-box a{
+    display: block;
+    width: 25%;
+}
+
+.content {
+    display: flex;
+    height: 200px;
+    margin: 10px;
+    color: black;
+    background-color: white;
+}
+.content:hover{
+    background-color: #dcdcdc;
+}
+
+.searchImg{
+    width: 200px;
+    height: 100px;
+}
+.preview-images{
+    width: 100%;
+    height: 200px;
+}
+
+.a {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffeddd;
+}
+
+li{
+    color: #ff7400;
+    float: left;
+    padding-top: 14px;
+    padding-right: 16px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+
+ul{
+    overflow: hidden;
+    display: flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    justify-content: center;
+}
+#list{
+    display: block;
+}
+#list ul li a{
+    border: 1px solid #ff7400;
+    display: block;
+    padding: 0 17px;
+    letter-spacing: -1px;
+    height: 32px;
+    line-height: 30px;
+    background: #fff;
+    text-align: center;
+    font-size: 1.250em;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    color: #ff7400;
+
+}
+
+#list ul li.on a{
+    background-color: #ff7400;
+    color: white;
+}
+
+h2{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+p{
+    font-size: 14px;
+}
+
+#searchButton{
+    float: right;
+}

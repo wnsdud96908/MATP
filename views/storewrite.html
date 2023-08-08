@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/search/storewrite" method="post">
+    지역번호: <input type="text" name="rgn_no" id="rgn_no">
+    가게이름: <input type="text" name="store_nm" id="store_nm">
+    가게주소: <input type="text" name="store_addr" id="store_addr">
+    상세주소: <input type="text" name="store_detail_addr" id="store_detail_addr">
+    전화번호: <input type="text" name="store_tel" id="store_tel">
+    가게정보: <input type="text" name="store_content" id="store_content">
+    평일영업시간: <input type="text" name="store_wkd_time" id="store_wkd_time">
+    주말영업시간: <input type="text" name="store_wknd_time" id="store_wknd_time">
+    휴식시간: <input type="text" name="store_break_time" id="store_break_time">
+    <div class="form-group">
+        <label for="example-input-file"> </label>
+        <input type="file" name="multi-files" multiple id="input-multi-files" class="form-control-file border"/>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="preview-images"></div>
+            </div>
+        </div>
+    </div>
+    <button>등록</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/javascripts/storewrite.js"></script>
+</body>
+</html>

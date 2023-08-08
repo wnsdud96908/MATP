@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상세정보</title>
+    <link rel="stylesheet" href="/stylesheets/detail.css">
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+</head>
+<body>
+{% include "header.html" %}
+{% include "navbar.html" %}
+<div id="main">
+<div id="c">
+  <div id="c1">
+    <h1 class="title">{{boards.board_title}}</h1>
+    <div id="c2">
+      <div id="c3">
+<!--        <h2 class="store">{{boards.store_name}}</h2>-->
+      </div>
+     {% for img in boards.img %}
+     <div id="img"><img class="preview-images" width=100 src="{{ img.url }}" accept="image/*"></div>
+     {% endfor %}
+    </div>
+  </div>
+    <div class="content">{{boards.board_content}}</div>
+    <div id="button"><button><a href="/board">돌아가기</a></button></div>
+
+</div>
+</div>
+{% include "footer.html" %}
+</body>
+</html>

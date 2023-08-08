@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    {% include "header.html" %}
+    {% include "navbar.html" %}
+    <div id="main">
+      <span>전국 맛집 랭킹</span>
+      <div id="mainRank">
+        {% for i in range(0, store.length) %}
+        <div class="content">
+            <a href="/store/{{store[i].store_no}}" class="rank">
+                {% if store[i].img.length > 0 %}
+                <div class="mainImg"><img class="preview-image" width=100 src="{{ store[i].img[0].url }}" accept="image/*">
+                </div>
+                {% else %}
+                <div class="mainImg"><img class="preview-image" width=100 src="/images/basic.jpg" accept="image/*">
+                </div>
+                {% endif %}
+                <div class="a">
+                    <h2>{{store[i].store_nm}}</h2>
+                    <p>{{store[i].store_addr}}</p>
+                    <p>{{store[i].store_content}}</p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% include "footer.html" %}
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: orange;
+}
+
+/* header */
+#joinTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}
+
+#title {
+    color: black;
+    text-decoration: none;
+}
+/* header */
+
+/* body */
+label{
+    display: inline-block;
+    font-weight: 600;
+    width: 110px;
+}
+
+button{
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+    background-color: orange;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 0.5px rgba(0, 0, 0, 0.4);
+    transition: .3s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+    color: orange;
+    font-weight: 600;
+}
+
+.content > input{
+    margin: 0 20px;
+    padding-left: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 26px;
+    width: 160px;
+}
+
+#genderBox{
+    margin: 0 20px;
+    font-weight: 500;
+}
+
+#genderBox > input{
+    margin: 0 20px;
+}
+
+#genderBox > input:focus{
+    outline: 2px solid orange;
+    outline-offset: 2px;
+}
+
+input:focus{
+    outline: 2px solid orange;
+    outline-offset: 2px;
+}
+
+.content{
+    display: flex;
+    margin: 10px 80px 0 80px;
+    align-items: center;
+}
+
+.essential{
+    color: rgb(180, 11, 11);
+}
+
+#timer{
+    font-size: 12px;
+    color: black;
+}
+
+.informChk{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 207px;
+    margin-top: 2px;
+}
+
+#userForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    height: 600px;
+    width: 600px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 11px 0.5px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    padding: 30px;
+}
+
+#btnBox{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.joinBtn{
+    display: inline-block;
+    margin: 0 20px;
+}
+/* body */

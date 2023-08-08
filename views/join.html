@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/join.css" />
+    <title>{{title}}</title>
+</head>
+<body>
+    <div id="joinTitle">
+        <a id="title" href="/">M A T P</a>
+    </div>
+    <div id="userForm">
+        <div id="joinBody">
+            <div class="essential content">
+                <label for="join_id">* 아이디</label>
+                <input id="join_id" type="text" placeholder="ID" name="id" />
+                <button id="idChkBtn">ID 중복확인</button>
+            </div>
+            <span class="informChk" id="idChk">&nbsp;</span>
+            <div class="essential content">
+                <label for="join_nick">* 닉네임</label>
+                <input id="join_nick" type="text" placeholder="닉네임" name="nick" />
+                <button id="nickChkBtn">닉네임 중복확인</button>
+            </div>
+            <span class="informChk" id="nickChk">&nbsp;</span>
+            <div class="essential content">
+                <label for="join_password">* 비밀번호</label>
+                <input id="join_password" type="password" placeholder="비밀번호" name="pwd" />
+            </div>
+            <div class="essential content">
+                <label for="password_chk">&nbsp; &nbsp;비밀번호 확인</label>
+                <input id="password_chk" type="password" placeholder="비밀번호 확인" name="password-chk" />
+            </div>
+            <span class="informChk" id="pwChk">&nbsp;</span>
+            <div class="essential content">
+                <label for="join_name">* 이름</label>
+                <input id="join_name" type="text" placeholder="이름" name="name" />
+            </div>
+            <div class="essential content">
+                <label for="join_birthday">* 생년월일</label>
+                <input id="join_birthday" type="text" placeholder="1900-00-00" name="birthday" />
+            </div>
+            <div class="essential content">
+                <label for="join_phone">* 전화번호</label>
+                <input id="join_phone" type="text" maxlength="11" placeholder="010-0000-0000" name="phone" />
+                <button id="phoneChkBtn">인증번호 받기</button>
+            </div>
+            <div class="essential content">
+                <label id="timer" for="phoneChk"></label>
+                <input id="authInput" type="text" placeholder="인증번호 입력" />
+                <button id="authChkBtn">인증번호 확인</button>
+            </div>
+            <div class="essential content">
+                <label for="join_email">* 이메일</label>
+                <input id="join_email" type="email" placeholder="example@email.com" name="email" />
+                <button id="emailChkBtn">이메일 중복확인</button>
+            </div>
+            <span class="informChk" id="emailChk">&nbsp;</span>
+            <div class="content">
+                <label for="join_region">&nbsp; &nbsp;지역</label>
+                <input id="join_region" type="text" name="addr" />
+            </div>
+            <div class="content">
+                <label for="genderBox">&nbsp; &nbsp;성별</label>
+                <div id="genderBox">
+                    남자
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="남자"
+                          onclick="getGender(event)"
+                        />
+                    여자
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="여자"
+                          onclick="getGender(event)"
+                        />
+                </div>
+            </div>
+        </div>
+        <div id="btnBox">
+            <button class="joinBtn" id="join_btn">가입하기</button>
+            <button class="joinBtn" id="cancel_btn" type="button">가입취소</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/javascripts/join.js"></script>
+</body>
+</html>

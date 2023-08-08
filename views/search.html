@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/search.css"/>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <title>search</title>
+</head>
+<body>
+{% include "header.html" %}
+{% include "navbar.html" %}
+<div id="main">
+<form action="/search/" method="get" class="searchHeader">
+    <div class="search-form">
+        <input type="text" name="query" class="search-input" placeholder="검색어를 입력하시오.">
+        <button class="search-button">검색</button>
+    </div>
+</form>
+<div id="list">
+    <ul>
+        <li><a href="/list" id="x">전체</a></li>
+        <li><a href="/search?query=1">서울</a></li>
+        <li><a href="/search?query=2">부산</a></li>
+        <li><a href="/search?query=3">대구</a></li>
+        <li><a href="/search?query=4">울산</a></li>
+        <li><a href="/search?query=5">인천</a></li>
+        <li><a href="/search?query=6">경기도</a></li>
+        <li><a href="/search?query=7">강원도</a></li>
+        <li><a href="/search?query=8">충청도</a></li>
+        <li><a href="/search?query=9">전라도</a></li>
+        <li><a href="/search?query=10">경상도</a></li>
+    </ul>
+</div>
+<div id="content-box">
+    {% for i in range(0, store.length) %}
+    <!--        <div id="contentWrap">-->
+    <a href="/store/{{store[i].store_no}}">
+        <div class="content">
+            {% if store[i].img.length > 0 %}
+            <div class="searchImg"><img class="preview-images" width=100 src="{{ store[i].img[0].url }}" accept="image/*"></div>
+            {% else %}
+            <div class="searchImg"><img class="preview-images" width=100 src="/images/basic.jpg" accept="image/*">
+            </div>
+            {% endif %}
+            <div class="a">
+                <h2>{{store[i].store_nm}}</h2>
+                <p>{{store[i].store_addr}}<p>
+                <div>
+                    <p>{{store[i].store_content}}</p>
+                    <p>평일:{{store[i}.store_wkd_time}}</p>
+                    <p>주말:{{store[i}.store_wknd_time}}</p>
+                </div>
+            </div>
+<!--            <div>-->
+<!--                <button class="favorite">즐겨찾기</button>-->
+<!--            </div>-->
+        </div>
+        <!--    </div>-->
+    </a>
+    {% endfor %}
+</div>
+
+<nav aria-label="Board pagination">
+    <ul class="pagination justify-content-center">
+        {% if currentPage > 1 %}
+        <li class="page-item">
+            <a class="page-link" href="?query={{ query }}&page={{ currentPage - 1 }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endif %}
+        {% for i in range(1, totalPages+1) %}
+        <li class="page-item{% if i == currentPage %} active{% endif %}">
+            <a class="page-link" href="?query={{ query }}&page={{ i }}">{{i}}</a>
+        </li>
+        {% endfor %}
+        {% if currentPage < totalPages %}
+        <li class="page-item">
+            <a class="page-link" href="?query={{ query }}&page={{ currentPage + 1 }}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+<div>
+    <button id="searchButton"><a href="/list/storewrite">등록</a></button>
+</div>
+</div>
+{% include "footer.html" %}
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>목록</title>
+    <link rel="stylesheet" href="/stylesheets/index.css"/>
+    <link rel="stylesheet" href="/stylesheets/board.css"/>
+</head>
+<body>
+{% include "header.html" %}
+{% include "navbar.html" %}
+<div id="main">
+<div id="a">
+    <h1>추천맛집</h1>
+    <hr>
+    <div id="b">
+        {% for i in range(0, boards.length) %}
+        <a href="/board/detail/{{boards[i].board_no}}" id="link">
+            <div id="c">
+                <div id="c1">
+                    <div id="cont">
+                        <h2 class="title">{{boards[i].board_title}}</h2>
+                        <h2 class="content">{{boards[i].board_content}}</h2>
+                    </div>
+                    <div id="c2">
+                        {% if boards[i].img.length > 0 %}
+                        <div><img class="preview-images" width=100 src="{{ boards[i].img[0].url }}" accept="image/*">
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="createAt">
+                    {{boards[i].createdAt}}
+                </div>
+                {% if button==boards[i].user_no %}
+                <div id="button">
+                    <button><a href="/board/update/{{boards[i].board_no}}">수정</a></button>
+                    <form action="/board/delete/{{boards[i].board_no}}" method="post">
+                        <button>삭제</button>
+                    </form>
+                </div>
+                {% endif %}
+
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <nav aria-label="Board pagination" class="pagination">
+        <ul class="pagination justify-content-center">
+            {% if currentPage > 1 %}
+            <li class="page-item">
+                <a class="page-link" href="/board?page={{currentPage-1}}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            {% endif %}
+            {% for i in range(1, totalPages+1) %}
+            <li class="page-item{% if i == currentPage %} active{% endif %}">
+                <a class="page-link" href="/board?page={{i}}">{{i}}</a>
+            </li>
+            {% endfor %}
+            {% if currentPage < totalPages %}
+            <li class="page-item">
+                <a class="page-link" href="/board?page={{currentPage+1}}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+        <div id="create">
+            {% if user %}
+            <button><a href="/board/create/{{user.user_id}}">등록</a></button>
+            {% else %}
+            <button><a href="/board/create">등록</a></button>
+            {% endif %}
+        </div>
+    </nav>
+
+</div>
+</div>
+{% include "footer.html" %}
+</body>
+<script src="/javascripts/index.js"></script>
+</html>

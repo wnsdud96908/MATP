@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+    <title>{{title}}</title>
+</head>
+<body>
+    <a id="title" href="/">M A T P</a>
+    <div class="selectMethod">
+        <button>ID</button>
+        <button>E-mail</button>
+    </div>
+    <div id="main">
+        <form id="loginForm" action="/auth/login" method="post">
+            <div class="login-lable" id="label-id">아이디</div>
+            <input id="login-id" placeholder="ID" type="text" name="id" />
+            <div class="login-lable" id="label-pw">비밀번호</div>
+            <input id="login-password" placeholder="PASSWORD" type="password" name="password" />
+            <button id="loginBtn" type="submit">Log In</button>
+        </form>
+        <div id="line"></div>
+        <div class="selectJoin">
+            <a href="/auth/join">회원가입</a>
+            <span>/</span>
+            <button id="searchId">ID찾기</button>
+            <button id="searchPw">PW찾기</button>
+        </div>
+        <div class="selectLogin">
+            <a id="kakao" href="/auth/kakao">KAKAO</a>
+            <a id="naver" href="/auth/login">NAVER</a>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/javascripts/login.js"></script>
+</html>

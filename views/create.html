@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판등록</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/create.css">
+    <link rel="stylesheet" href="/stylesheets/index.css"/>
+
+<body>
+{% include "header.html" %}
+{% include "navbar.html" %}
+<div id="main">
+<div id="board">
+    <form method="post" enctype="multipart/form-data">
+        제목 <input type="text" name="board_title" id="title">
+        <div class="form-group">
+            <label for="example-input-file">이미지</label>
+            <input type="file" name="multi-files" multiple id="input-multi-files" class="form-control-file border"/>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="preview-images"></div>
+            </div>
+        </div>
+        내용<textarea name="board_content" id="content" cols="50" rows="10"></textarea><hr>
+        <button type="submit" class="btn btn-primary">등록</button>
+    </form>
+</div>
+</div>
+{% include "footer.html" %}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/javascripts/create.js"></script>
+</body>
+</html>

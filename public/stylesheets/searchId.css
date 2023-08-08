@@ -1,0 +1,73 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 30px;
+    background-color: orange;
+}
+
+#title{
+    font-size: 30px;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 3px 1px 10px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+#btnBox{
+    margin-top: 15px;
+}
+
+button{
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+    background-color: orange;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 0.5px rgba(0, 0, 0, 0.4);
+    transition: .3s;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+    color: orange;
+    font-weight: 600;
+}
+
+input{
+    margin: 0 20px;
+    padding-left: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 26px;
+    width: 160px;
+    margin: 10px 0;
+}
+
+.inputBox{
+    margin-left: 22px;
+    width: 250px;
+}
+
+#email{
+    margin-left: 12px;
+}
+
+#name{
+    margin-left: 26px;
+}

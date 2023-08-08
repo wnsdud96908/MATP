@@ -1,0 +1,42 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: black;
+}
+#c{
+    height: 100%;
+    width: 1300px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    color: rgb(44, 135, 241);
+}
+.content{
+    padding: 20px;
+    line-height: 50px;
+    text-align: left;
+
+}
+#c2{
+    display: flex;
+    justify-content: center;
+}
+.preview-images{
+    width: 200px;
+    height: 200px;
+}
+#button{
+    text-align: right;
+}
+#at{
+
+    text-align: right;
+}
