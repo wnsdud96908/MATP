@@ -1,23 +1,23 @@
 {
   "development": {
     "username": "root",
-    "password": "96908",
+    "password": "1234",
     "database": "matp",
-    "host": "127.0.0.1",
+    "host": "db",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "eduroot614!@",
+    "password": "1234",
     "database": "matp",
-    "host": "127.0.0.1",
+    "host": "db",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "eduroot614!@",
+    "password": "1234",
     "database": "matp",
-    "host": "127.0.0.1",
+    "host": "db",
     "dialect": "mysql"
   }
 }

@@ -1,22 +1,21 @@
-FROM ubuntu:22.04
+# Dockerfile for node.js
 
-RUN apt-get -qq update
-RUN apt-get -qq upgrade --yes
-RUN apt-get -qq install curl --yes
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
-RUN apt-get -qq install nodejs --yes
-RUN apt-get -qq install vim --yes
-RUN apt-get -qq install net-tools
+FROM node:18.15.0
 
-WORKDIR /app
+ENV DOCKERIZE_VERSION v0.2.0
+RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-COPY ./package.json ./
+RUN npm install -g nodemon
+RUN mkdir -p /MATP
+WORKDIR /MATP
 
+COPY package*.json ./
 RUN npm install
-RUN npm install pm2 -g
 
 COPY . .
 
-EXPOSE 3002
+RUN chmod +x docker-entrypoint.sh
+ENTRYPOINT ./docker-entrypoint.sh
 
-ENTRYPOINT ["pm2-runtime", "/app"]
+EXPOSE 3333
